@@ -1,0 +1,54 @@
+div {
+    margin-bottom: 20px;
+  }
+  .correct, .incorrect {
+    text-transform: capitalize;
+  }
+
+body {
+    background-image: url("../images/RetroAbstract.jpg")
+
+}
+
+.container {
+    background-color: rgb(240, 240, 216);
+    border: 2px double rgb(0, 77, 139);
+    width: 75%;
+    position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color:rgb(0, 77, 139);
+    font-size: 48px;
+    font-family:'Hammersmith One', sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+#start {
+    height: 50px;
+    width: 200px;
+    font-size: 25px;
+    margin-left: 37.50%;
+    position: center;
+    align-items: center;
+}
+
+#timer {
+    text-align:center; 
+}
+
+#quiz-form {
+    text-align:center; 
+}
+
+#submit {
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    margin-left: 37.50%;
+    position: center;
+    align-items: center;
+}

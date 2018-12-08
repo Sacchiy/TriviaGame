@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>90's TV Show Trivia Quiz</title>
+        <script  src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+        <script src="assets/javascript/app.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class='container'>
+        <h1>Trivia Quiz</h1>
+        <button type="button" class="btn btn-info" id='start'>Start</button>
+        <div id='timer'></div>
+        <form id="quiz-form">
+            <label>
+                <div id="questionOne"></div>
+                <form class='q1'>
+                    <p id='q1'></p>
+                    <input type="radio" name="option1" value='0' id= "one"><label for="q1-one"></label>
+                    <input type="radio" name="option1" value='1' id= "two"><label for="q1-two"></label>
+                    <input type="radio" name="option1" value='2' id= "three"><label for="q1-three"></label>
+                    <input type="radio" name="option1" value='3' id = "four"><label for="q1-four"></label>
+                </form>
+                <form class = 'q2'>
+                    <p id='q2'></p>
+                    <input type="radio" name="option2" value='0' id= "one"><label for="q2-one"></label>
+                    <input type="radio" name="option2" value='1' id= "two"><label for="q2-two"></label>
+                    <input type="radio" name="option2" value='2' id= "three"><label for="q2-three"></label>
+                    <input type="radio" name="option2" value='3' id = "four"><label for="q2-four"></label>
+                </form>        
+                <form class = 'q3'>
+                    <p id='q3'></p>
+                    <input type="radio" name="option3" value='0' id= "one"><label for="q3-one"></label>
+                    <input type="radio" name="option3" value='1' id= "two"><label for="q3-two"></label>
+                    <input type="radio" name="option3" value='2' id= "three"><label for="q3-three"></label>
+                    <input type="radio" name="option3" value='3' id = "four"><label for="q3-four"></label>
+                </form>
+                <form class = 'q4'>
+                    <p id='q4'></p>
+                    <input type="radio" name="option4" value='0' id= "one"><label for="q4-one"></label>
+                    <input type="radio" name="option4" value='1' id= "two"><label for="q4-two"></label>
+                    <input type="radio" name="option4" value='2' id= "three"><label for="q4-three"></label>
+                    <input type="radio" name="option4" value='3' id = "four"><label for="q4-four"></label>
+                </form>        
+                <form class = 'q5'>
+                    <p id='q5'></p>
+                    <input type="radio" name="option5" value='0' id= "one"><label for="q5-one"></label>
+                    <input type="radio" name="option5" value='1' id= "two"><label for="q5-two"></label>
+                    <input type="radio" name="option5" value='2' id= "three"><label for="q5-three"></label>
+                    <input type="radio" name="option5" value='3' id = "four"><label for="q5-four"></label>
+                </form>
+                <form class = 'q6'>
+                    <p id='q6'></p>
+                    <input type="radio" name="option6" value='0' id= "one"><label for="q6-one"></label>
+                    <input type="radio" name="option6" value='1' id= "two"><label for="q6-two"></label>
+                    <input type="radio" name="option6" value='2' id= "three"><label for="q6-three"></label>
+                    <input type="radio" name="option6" value='3' id = "four"><label for="q6-four"></label>
+                </form>
+                <form class = 'q7'>
+                    <p id='q7'></p>
+                    <input type="radio" name="option7" value='0' id= "one"><label for="q7-one"></label>
+                    <input type="radio" name="option7" value='1' id= "two"><label for="q7-two"></label>
+                    <input type="radio" name="option7" value='2' id= "three"><label for="q7-three"></label>
+                    <input type="radio" name="option7" value='3' id = "four"><label for="q7-four"></label>
+                </form>
+                <form class = 'q8'>
+                    <p id='q8'></p>
+                    <input type="radio" name="option8" value='0' id= "one"><label for="q8-one"></label>
+                    <input type="radio" name="option8" value='1' id= "two"><label for="q8-two"></label>
+                    <input type="radio" name="option8" value='2' id= "three"><label for="q8-three"></label>
+                    <input type="radio" name="option8" value='3' id = "four"><label for="q8-four"></label>
+                </form>
+            </label>
+            <br>
+            <button type="submit" id='submit'>Submit</button>
+        </form>
+        <div id="result"></div>
+        </div>
+    </body>
+</html>
