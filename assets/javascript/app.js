@@ -1,35 +1,24 @@
 $(document).ready(function() {
+
     $('#quiz-form').hide();
     $('#submit').hide();
     $('#start').on('click', function() {
         $('#quiz-form').toggle();
         $('#submit').toggle();
         $('#start').hide();
-        var counter = 30;
         var interval = setInterval(function() {
             counter--;
             $("#timer").html("<h2>Time Remaining: " + counter + " seconds</h2>");
             if (counter == 0) {
             clearInterval(interval);
-            $('#timer').hide();
-            $('#quiz-form').hide();
-            $('#submit').hide();
-            $('#result').toggle();
+            $("#comment").html("Time's Up!");
+            results();
         }}, 1000);
-    });
 
-  //  Once number hits zero...
-  //if (counter === 0) {
-  
-    //  ...run the stop function.
-  //  stop();
-  
-    //  Alert the user that time is up.
-  //  alert("Time Up!");
-  // }
-  
-  var correct= 0
-  var incorrect= 0
+  var counter = 30;
+  var correct= 0;
+  var incorrect= 0;
+  var unanswered= 0;
   
   var arrays = {
       questions: [
@@ -151,121 +140,95 @@ $(document).ready(function() {
   $("label[for=q8-three]").html(q[7].choices[2]);
   $("label[for=q8-four]").html(q[7].choices[3]);
   
-  //results
-      var radioValueOne = $('input[name="option1"]:checked').val();
-      var radioValueTwo = $('input[name="option2"]:checked').val();
-      var radioValueThree = $('input[name="option3"]:checked').val();
-      var radioValueFour = $('input[name="option4"]:checked').val();
-      var radioValueFive = $('input[name="option5"]:checked').val();
-      var radioValueSix = $('input[name="option6"]:checked').val();
-      var radioValueSeven = $('input[name="option7"]:checked').val();
-      var radioValueEight = $('input[name="option8"]:checked').val();
-      
-      //storing checked button value to jquery
-      
-      if(radioValueOne == q[0].correct) {
-          correct = correct + 1;
-          console.log("Correct: " + correct);
-      } else {
-          incorrect = incorrect + 1;
-          console.log("Incorrect: " + incorrect);
-      };
-      if (radioValueTwo == q[1].correct) {
-          correct = correct + 1;
-      } else {
-          incorrect = incorrect + 1;
-      };
-      if (radioValueThree == q[2].correct) {
-          correct = correct + 1;
-      } else {
-          incorrect = incorrect + 1;
-      };
-      if (radioValueThree == q[3].correct) {
-          correct = correct + 1;
-      } else {
-          incorrect = incorrect + 1;
-      };
-      if (radioValueThree == q[4].correct) {
-          correct = correct + 1;
-      } else {
-          incorrect = incorrect + 1;
-      };
-      if (radioValueThree == q[5].correct) {
-          correct = correct + 1;
-      } else {
-          incorrect = incorrect + 1;
-      };
-      if (radioValueThree == q[6].correct) {
-          correct = correct + 1;
-      } else {
-          incorrect = incorrect + 1;
-      };
-      if (radioValueThree == q[7].correct) {
-          correct = correct + 1;
-      } else {
-          incorrect = incorrect + 1;
-      };
-  
-      $('#submit').on('click',function(){
-          $('#quiz-form').hide();
-          $('#submit').hide();
-          $('#start').hide();
-          $('#timer').hide();
-          $('#result').toggle();
-          $('#result').html("Correct: " + correct + "<p>Incorrect: " + incorrect + "<p>Unanswered: ");
-      });
-  
-    //  var _t = this;
-    //  _t.userPick = null;
-    //  _t.answers = {
-    //      correct: 0,
-    //      incorrect: 0
-    // };
-  
-      // _t.images = null;
-      // _t.count = 30;
-      // _t.current = 0;
-  
-  //_t.ask = function() {
-         // if (arrays.questions[_t.current]) {
-           //   $("#timer").html("Time remaining: " + "00:" + _t.count + " secs");
-             // $("#question_div").html(arrays.questions[_t.current].question);
-             // var choicesArr = _t.questions[_t.current].choices;
-             // var buttonsArr = [];
-  
-             // for (var i = 0; i < choicesArr.length; i++) {
-             //     var button = $('<button>');
-             //     button.text(choicesArr[i]);
-             //     button.attr('data-id', i);
-             //     $('#choices_div').append(button);
-             // }
-             // window.triviaCounter = setInterval(_t.timer, 1000);
-          // } else {
-             // $('body').append($('<div />', {
-               //   text: 'Unanswered: ' + (
-                 //     _t.questions.length - (_t.answers.correct + _t.answers.incorrect)),
-                 // class: 'result'
-             // }));
-            //  $('#start_button').text('Restart').appendTo('body').show();
-         // }
-     // };
-      // When the user submits the form,
-      //   Check what answer they picked
-      //   And tell them if they're correct
-  
-      // submit
-      //$("#quiz-form").on("submit", function(event) {
-       //   event.preventDefault();
-       //   var $answer = $("#quiz-answer"); 
-       //   var answer = $answer.val();
-      //  console.log(answer);
-        //  if (answer === "crocodile") {
-        //      $("#result").text("Woweeee! You got it! WOOO PARTY!");
-        //  }
-          
-     // });
+function results(){
+    var radioValueOne = $("input[name='option1']:checked").val();
+    var radioValueTwo = $('input[name="option2"]:checked').val();
+    var radioValueThree = $('input[name="option3"]:checked').val();
+    var radioValueFour = $('input[name="option4"]:checked').val();
+    var radioValueFive = $('input[name="option5"]:checked').val();
+    var radioValueSix = $('input[name="option6"]:checked').val();
+    var radioValueSeven = $('input[name="option7"]:checked').val();
+    var radioValueEight = $('input[name="option8"]:checked').val();
+ 
+    console.log(radioValueOne);
+    console.log(radioValueTwo);
+    console.log(radioValueThree);
+    console.log(radioValueFour);
+    console.log(radioValueFive);
+    console.log(radioValueSix);
+    console.log(radioValueEight);
 
+    //results  
+ if(radioValueOne == q[0].correct) {
+        correct = correct + 1;
+        console.log("Correct: " + correct);
+    } else if(radioValueOne !== q[0].correct){
+        incorrect = incorrect + 1;
+    } else {
+      unanswered = unanswered + 1;
+    };
+ if (radioValueTwo == q[1].correct) {
+        correct = correct + 1;
+    } else if(radioValueTwo !== q[1].correct){
+        incorrect = incorrect + 1;
+    } else {
+      unanswered = unanswered + 1;
+    };
+  if (radioValueThree == q[2].correct) {
+        correct = correct + 1;
+    } else if(radioValueThree !== q[2].correct){
+        incorrect = incorrect + 1;
+    } else {
+      unanswered = unanswered + 1;
+    };
+  if (radioValueFour == q[3].correct) {
+        correct = correct + 1;
+    } else if(radioValueFour !== q[3].correct){
+        incorrect = incorrect + 1;
+    } else {
+      unanswered = unanswered + 1;
+    };
+  if (radioValueFive == q[4].correct) {
+        correct = correct + 1;
+    } else if(radioValueFive !== q[4].correct){
+        incorrect = incorrect + 1;
+    } else {
+      unanswered = unanswered + 1;
+    };
+  if (radioValueSix == q[5].correct) {
+        correct = correct + 1;
+    } else if(radioValueSix !== q[5].correct){
+        incorrect = incorrect + 1;
+    } else {
+      unanswered = unanswered + 1;
+    };
+  if (radioValueSeven == q[6].correct) {
+        correct = correct + 1;
+    } else if(radioValueSeven !== q[6].correct){
+        incorrect = incorrect + 1;
+    } else {
+      unanswered = unanswered + 1;
+    };
+  if (radioValueEight == q[7].correct) {
+        correct = correct + 1;
+    } else if(radioValueEight !== q[7].correct){
+        incorrect = incorrect + 1;
+    } else {
+      unanswered = unanswered + 1;
+    };
+    
+    $('#quiz-form').hide();
+    $('#submit').hide();
+    $('#start').hide();
+    $('#timer').hide();
+    $('#result').show();
+    $('#result').html("Correct: " + correct + "<p>Incorrect: " + incorrect + "<p>Unanswered: " + unanswered);
+  };
 
-
-
+    $('#submit').on('click',function(){
+        clearInterval(interval);
+        $("#comment").html("All Done!");
+        results();
+    });
+  });
 });

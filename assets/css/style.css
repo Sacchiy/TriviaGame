@@ -35,7 +35,7 @@ h1 {
     height: 50px;
     width: 200px;
     font-size: 25px;
-    margin-left: 37.50%;
+    margin-left: 35%;
     position: center;
     align-items: center;
     border: 2px double rgb(0, 77, 139);
@@ -56,15 +56,19 @@ h1 {
     height: 40px;
     width: 150px;
     font-size: 20px;
-    margin-left: 37.50%;
+    margin-left: 35%;
     position: center;
     align-items: center;
     border: 2px double rgb(0, 77, 139);
 
 }
 
+#comment {
+    text-align: center;
+    font-weight: bold;
+}
+
 #result {
     text-align: center;
     font-weight: bold;
-
 }
