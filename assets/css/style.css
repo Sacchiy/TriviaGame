@@ -6,7 +6,9 @@ div {
   }
 
 body {
-    background-image: url("../images/RetroAbstract.jpg")
+    background-image: url("../images/RetroAbstract.jpg");
+    font-family:'Poppins', sans-serif;
+    color: rgb(0, 77, 139);
 
 }
 
@@ -17,27 +19,32 @@ body {
     position: center;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 h1 {
     color:rgb(0, 77, 139);
-    font-size: 48px;
-    font-family:'Hammersmith One', sans-serif;
+    font-size: 46px;
+    font-family:'Poppins', sans-serif;
     text-align: center;
     position: relative;
 }
 
 #start {
+    color:rgb(0, 77, 139);
     height: 50px;
     width: 200px;
     font-size: 25px;
     margin-left: 37.50%;
     position: center;
     align-items: center;
+    border: 2px double rgb(0, 77, 139);
 }
 
 #timer {
     text-align:center; 
+    font-family: 'Poppins', sans-serif;
+    color:rgb(0, 77, 139);
 }
 
 #quiz-form {
@@ -45,10 +52,19 @@ h1 {
 }
 
 #submit {
+    color:rgb(0, 77, 139);
     height: 40px;
     width: 150px;
     font-size: 20px;
     margin-left: 37.50%;
     position: center;
     align-items: center;
+    border: 2px double rgb(0, 77, 139);
+
+}
+
+#result {
+    text-align: center;
+    font-weight: bold;
+
 }
