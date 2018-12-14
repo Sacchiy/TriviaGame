@@ -25,7 +25,6 @@ $(document).ready(function() {
           {   type: "radiogroup",
               name: "Friends",
               title: "1. In Friends, what is Ross's occupation?",
-              isRequired: true,
               colCount: 4,
               choices: ["Docter", "Chef", "Marketing Professional", "Archeaologist"],
               correct: 3,
@@ -161,57 +160,56 @@ function results(){
     //results  
  if(radioValueOne == q[0].correct) {
         correct = correct + 1;
-        console.log("Correct: " + correct);
-    } else if(radioValueOne !== q[0].correct){
+    } else if(radioValueOne !== q[0].correct && radioValueOne !== undefined){
         incorrect = incorrect + 1;
     } else {
       unanswered = unanswered + 1;
     };
  if (radioValueTwo == q[1].correct) {
         correct = correct + 1;
-    } else if(radioValueTwo !== q[1].correct){
+    } else if(radioValueTwo !== q[1].correct && radioValueTwo !== undefined){
         incorrect = incorrect + 1;
     } else {
       unanswered = unanswered + 1;
     };
   if (radioValueThree == q[2].correct) {
         correct = correct + 1;
-    } else if(radioValueThree !== q[2].correct){
+    } else if(radioValueThree !== q[2].correct && radioValueThree !== undefined){
         incorrect = incorrect + 1;
     } else {
       unanswered = unanswered + 1;
     };
   if (radioValueFour == q[3].correct) {
         correct = correct + 1;
-    } else if(radioValueFour !== q[3].correct){
+    } else if(radioValueFour !== q[3].correct && radioValueFour !== undefined){
         incorrect = incorrect + 1;
     } else {
       unanswered = unanswered + 1;
     };
   if (radioValueFive == q[4].correct) {
         correct = correct + 1;
-    } else if(radioValueFive !== q[4].correct){
+    } else if(radioValueFive !== q[4].correct && radioValueFive !== undefined){
         incorrect = incorrect + 1;
     } else {
       unanswered = unanswered + 1;
     };
   if (radioValueSix == q[5].correct) {
         correct = correct + 1;
-    } else if(radioValueSix !== q[5].correct){
+    } else if(radioValueSix !== q[5].correct && radioValueSix !== undefined){
         incorrect = incorrect + 1;
     } else {
       unanswered = unanswered + 1;
     };
   if (radioValueSeven == q[6].correct) {
         correct = correct + 1;
-    } else if(radioValueSeven !== q[6].correct){
+    } else if(radioValueSeven !== q[6].correct && radioValueSeven !== undefined){
         incorrect = incorrect + 1;
     } else {
       unanswered = unanswered + 1;
     };
   if (radioValueEight == q[7].correct) {
         correct = correct + 1;
-    } else if(radioValueEight !== q[7].correct){
+    } else if(radioValueEight !== q[7].correct && radioValueEight !== undefined){
         incorrect = incorrect + 1;
     } else {
       unanswered = unanswered + 1;
